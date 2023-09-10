@@ -9,7 +9,7 @@ class ParkingGarage:
             ticket_number = len(self.tickets) + 1
             self.tickets[ticket_number] = {"paid": False}
             self.available_spaces -= 1
-            print(f"Ticket #{ticket_number} issued. {self.available_spaces} parking spaces remaining.")
+            print(f"Ticket #{ticket_number} issued. {self.available_spaces} parking spaces left.")
         else:
             print("Sorry, the garage is full.")
     
@@ -19,7 +19,7 @@ class ParkingGarage:
                 amount = input("Enter the amount to pay for parking: $")
                 if amount:
                     self.tickets[ticket_number]["paid"] = True
-                    print(f"Ticket #{ticket_number} has been paid. You have 15 minutes to leave.")
+                    print(f"Ticket #{ticket_number} has been paid. You have 10 minutes to leave.")
                 else:
                     print("Payment not received.")
             else:
@@ -34,7 +34,7 @@ class ParkingGarage:
                 self.available_spaces += 1
                 print("Thank you, have a nice day!")
             else:
-                print("You need to pay for parking before leaving.")
+                print("Please pay for parking before leaving.")
         else:
             print(f"Invalid ticket number: #{ticket_number}")
 
